@@ -28,7 +28,7 @@ class ParsingServer implements Runnable {
     @Override
     public void run() {
 
-        timer.schedule(new News().timerTask, 0, 20000);
+        timer.schedule(new News().timerTask, 0, 3600000);
     }
 }
 
