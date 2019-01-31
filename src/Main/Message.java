@@ -8,8 +8,8 @@ import java.util.Properties;
 
 public class Message {
     public static void main(String[] args) {
-        final String username = "vodyanov.news@gmail.com";
-        final String password = "misfits_1";
+        final String username = "login";
+        final String password = "password";
         final Properties properties = new Properties();
 
         properties.put("mail.smtp.auth", "true");
@@ -22,8 +22,8 @@ public class Message {
         try (Transport tr = session.getTransport()) {
 
             javax.mail.Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("vodyanov.news@gmail.com"));
-            message.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse("vodyanoof@gmail.com"));
+            message.setFrom(new InternetAddress("sanding address"));
+            message.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse("receiving address"));
             message.setSubject("Тема письма");
             message.setText("Тело письма");
 
